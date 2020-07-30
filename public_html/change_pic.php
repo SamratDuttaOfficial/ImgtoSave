@@ -16,6 +16,7 @@
 <form method="post" action="save_dp.php" enctype="multipart/form-data">
   <input type="hidden" name="member_id" value="<?php echo $id; ?>">
   <input type="file" name="image" required="required" accept=".jpg, .jpeg, .png"/>
+  <small style="font-family:courier,'new courier';" class="text-muted">Select JPG, JPEG or PNG file, lesser than 2MB.</small><br>
             <button type="submit" name="submit" class="btn btn-success">Change Profile Picture </button>
       </form>
       </div>
