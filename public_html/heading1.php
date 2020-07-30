@@ -29,7 +29,7 @@
         <small style="font-family:courier,'new courier';" class="text-muted">You can send your pic to someone else. Write their usernames separated with commas.</small><br> 
         <small style="font-family:courier,'new courier';" class="text-muted">Caution: Don't use spaces.</small>      
 				<input type="file" name="image" required="required" accept=".jpg, .jpeg, .png"/>
-        <small style="font-family:courier,'new courier';" class="text-muted">Select JPG, JPEG or PNG file, lesser than 2MB.</small><br>
+        <br><small style="font-family:courier,'new courier';" class="text-muted">Select JPG, JPEG or PNG file, lesser than 2MB.</small><br>
         <input type="hidden" name="type" value="listed" />
 				<button type="submit" name="submit" class="btn btn-success"><i class="icon-share"></i> ADD </button>
 			 </form>
