@@ -36,23 +36,12 @@ if (isset($_POST['submit'])) {
 						$location = htmlspecialchars("/upload/" . $uniquesavename . $image_name);
 						$photo=1; //1 for photo
 					}
-				}
-				else{
-						echo "The image size must me lesser than 2MB.";
-						echo "<button onclick='goBack()' type='button' class='btn btn-primary active'> Go Back </button>"; 
-            			echo "<script>";
-            			echo "function goBack() {";
-            			echo "window.location =". $_SERVER['HTTP_REFERER'];
-            			echo "}";
-            			echo "</script>";
-				}
+				}				
       	}
 
 				
 $conn->query("insert into post_pic (title,content,send_to,type,date_posted,member_id,poster_name,poster_username,photo,p_unique_id,photo_size) values('$title','$content','$send_to_with_comma','$type',NOW(),'$session_id','$username','$uname','$location','$p_unique_id','$photo_size')");
 
 header('Location: ' . $_SERVER['HTTP_REFERER']);
+}
 ?>
-<?php
-	}
-	?>
