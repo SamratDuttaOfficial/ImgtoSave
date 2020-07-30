@@ -5,7 +5,7 @@
 			<div id="masthead">  
 				<div class="container">
 					    <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-4">
 		<hr>
 		<center><img class="pp" src="<?php echo $image; ?>" height="140" width="160"></center>
 		<hr>
@@ -21,22 +21,24 @@
 					<form method="post" action="save_edit.php">
 	<input type="hidden" name="member_id" value="<?php echo $id; ?>">
 	
-	Firstname:<input type="text" name="firstname" value="<?php echo $row['firstname']; ?>">
+	Firstname:<div class="pull-right"><input type="text" name="firstname" value="<?php echo $row['firstname']; ?>"></div>
 	<hr>
-	Lastname:<input type="text" name="lastname" value="<?php echo $row['lastname']; ?>">
+	Lastname:<div class="pull-right"><input type="text" name="lastname" value="<?php echo $row['lastname']; ?>"></div>
 	<hr>
 	Gender:
+	<div class="pull-right">
 	<select name="gender">
 		<option><?php echo $row['gender']; ?></option>
 		<option>Male</option>
 		<option>Female</option>
 	</select>
+	</div>
 	<hr>
-	Address: <input name="address" type="text" value="<?php echo $row['address']; ?>">	
+	Address: <div class="pull-right"><input name="address" type="text" value="<?php echo $row['address']; ?>"></div>	
 	<hr>
-	Email:<input name="email" type="text" value="<?php echo $row['email']; ?>">
+	Email:<div class="pull-right"><input name="email" type="text" value="<?php echo $row['email']; ?>"></div>
 	<hr>
-	Contact No. :<input name="contact_no" type="text" value="<?php echo $row['contact_no']; ?>">
+	Contact No. :<div class="pull-right"><input name="contact_no" type="text" value="<?php echo $row['contact_no']; ?>"></div>
 	<hr>
 	<br>
 			<center>
