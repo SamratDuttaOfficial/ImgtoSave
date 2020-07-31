@@ -10,12 +10,7 @@ $firstname = htmlspecialchars($_POST['firstname']);
 $lastname = htmlspecialchars($_POST['lastname']);
 $gender = htmlspecialchars($_POST['gender']);
 $member_category = htmlspecialchars($_POST['member_category']);
-$pass1 = hash('sha384', $pass);
-$pass2 = hash('sha256', $pass1);
-$pass3 = hash('md5', $pass2);
-$pass4 = hash('snefru', $pass3);
-$pass5 = hash('crc32', $pass4);
-$password = hash('sha512', $pass5);
+$password = hash('sha256', $pass);
 
 if(!empty($_POST["name"])) {
   $result = $conn->query("SELECT count(*) FROM members WHERE username='" . $_POST["name"] . "'");
